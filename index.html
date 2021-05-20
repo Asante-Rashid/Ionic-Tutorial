@@ -10,10 +10,43 @@
     <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+    <!-- defer waits until the page has rendered to run the script -->
+    <script src="app.js" defer></script>
 </head>
 
 <body>
-<ion-button>Click Me!</ion-button>
+    <!-- make sure to use the JS(HTMNL) documentation when coding a normal page and use the react docs appropriately -->
+    <ion-app>
+        <ion-header>
+            <ion-toolbar color='primary'>
+                <ion-title>
+                    BMI Calculator
+                </ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <ion-content>
+            <ion-item>
+                <ion-label position="floating">Height</ion-label>
+                <ion-input id='height'></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">Weight</ion-label>
+                <ion-input id='weight'></ion-input>
+            </ion-item>
+
+            <ion-button>Calculate</ion-button>
+            <div id='result'></div>
+        </ion-content>
+    </ion-app>
+    <!-- ion click button script -->
+    <!-- <ion-button>Click Me!</ion-button>
+<script>
+    const btn = document.querySelector('ion-button')
+
+    btn.addEventListener('click', () => {
+        console.log('click')
+    })
+</script> -->
 </body>
 
 </html>
