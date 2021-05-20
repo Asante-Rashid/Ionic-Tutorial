@@ -24,7 +24,7 @@
                 </ion-title>
             </ion-toolbar>
         </ion-header>
-        <ion-content>
+        <ion-content class="ion-padding">
             <ion-item>
                 <ion-label position="floating">Height</ion-label>
                 <ion-input id='height'></ion-input>
@@ -34,8 +34,34 @@
                 <ion-input id='weight'></ion-input>
             </ion-item>
 
-            <ion-button>Calculate</ion-button>
-            <div id='result'></div>
+            <!-- text dont work on ion-btn -->
+            <!-- <div class="ion-text-center"> -->
+            <ion-grid class="ion-text-center ion-margin">
+                <ion-row>
+                    <ion-col>
+                        <ion-button id='calculate' class="ion-margin-top">
+                            <ion-icon slot="start" name="calculator-outline"></ion-icon>
+                            Calculate
+                        </ion-button>
+                    </ion-col>
+                    <ion-col>
+                        <ion-button id='reset' fill="outline" class="ion-margin-top">
+                            <ion-icon slot="start" name="refresh-outline"></ion-icon>
+                            reset
+                        </ion-button>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col id='result'>
+                     
+                       
+                    </ion-col>
+                   
+                </ion-row>
+            </ion-grid>
+
+            <!-- </div> -->
+
         </ion-content>
     </ion-app>
     <!-- ion click button script -->
